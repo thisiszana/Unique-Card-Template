@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    align-items: center;
+    justify-items: center;
+    min-height: 100vh;
+    background-color: #a3b18a;
+    gap: 30px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 320px;
+    height: 400px;
+}
+
+.card .img-box {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    border-radius: 15px;
+}
+
+.card .img-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.card .img-box::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: -10px 10px 0 #a3b18a;
+}
+
+.card .img-box::after{
+    content: '';
+    position: absolute;
+    bottom: 68px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: -10px 10px 0 #a3b18a;
+}
+
+.card .content {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    background-color: #344e41;
+}
+
+.card .content ul {
+    padding: 0 20px;
+    list-style: none;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.card .content p {
+    font-size: 14px;
+}
+
+.card .content .more {
+    position: absolute;
+    top: -52%;
+    width: 50%;
+    height: 52%;
+    background-color: #344e41;
+    border-top: 10px solid #a3b18a;
+    border-right: 10px solid #a3b18a;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 15px;
+}
+
+.card .content .more a {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    margin: 15px;
+    background-color: #ffffff;
+    color: #344e41;
+    border-radius: 7px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #344e41;
+    transition: all .3s;
+}
+
+.card .content .more a:hover {
+    color: #ffffff;
+    background-color: #344e41;
+    border: 2px solid #ffffff;
+}
+
+.card .content .more::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: -10px -10px 0#a3b18a;
+
+}
+
+.card .content .more::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: -25px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: -10px 10px 0 #344e41;
+}
